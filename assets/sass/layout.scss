@@ -1,0 +1,70 @@
+@import "fonts";
+@import "variables";
+@import "elements";
+@import "partials/page_loader";
+@import "partials/error_page";
+@import "partials/index_page";
+@import "partials/footer";
+@import "partials/login_providers";
+@import "partials/chapter";
+@import "partials/answer";
+@import "partials/lock";
+@import "font-awesome/scss/font-awesome";
+
+html {
+  height: 100%;
+}
+
+body {
+  height: auto;
+  min-height: 100%;
+}
+
+body {
+  background: $base-background-color;
+  background-size: cover;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $base-color;
+  line-height: 25px;
+
+  section {
+    height: 100%;
+
+    .container {
+      height: 100%;
+
+      .title {
+        color: $title-color;
+
+        h1 {
+          font-size: 150%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile-screen-width) {
+    .custom-column {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+
+    .quest-view-section {
+      padding-bottom: $footer-height-mobile;
+    }
+
+    .footer {
+      height: $footer-height-mobile;
+    }
+  }
+
+  #__nuxt {
+    &.waiting {
+      cursor: wait;
+    }
+  }
+  .email {
+    color: #1363ab;
+  }
+}

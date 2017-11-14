@@ -1,0 +1,14 @@
+.error-page {
+  width: 100%;
+  text-align: center;
+  padding: $footer-height 20px;
+
+  .title {
+    font-size: 150%;
+    color: $title-color;
+  }
+
+  div {
+    margin-bottom: 30px;
+  }
+}

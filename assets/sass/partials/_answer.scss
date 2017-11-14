@@ -1,0 +1,37 @@
+#answer {
+  border: 4px solid rgba(86, 83, 83, 0.34);
+  border-radius: $base-border-radius;
+
+  input {
+    box-shadow: none;
+    border: none;
+    outline: none;
+
+    &.is-active, &.is-focused, &:active, &:focus, &:hover {
+      outline: none;
+      border: none;
+      box-shadow: none;
+      z-index: 0;
+    }
+  }
+
+  &.error {
+    border-color: rgba(177, 64, 64, 0.3);
+
+    .button {
+      &.is-primary {
+        background-color: $error-color !important;
+      }
+    }
+  }
+
+  &.success {
+    border-color: rgba(44, 109, 81, 0.38);
+
+    .button {
+      &.is-primary {
+        background-color: $success-color !important;
+      }
+    }
+  }
+}

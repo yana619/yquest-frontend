@@ -1,0 +1,28 @@
+.chapter{
+  .title {
+    font-size: 200%;
+  }
+
+  .question {
+    margin-bottom: 1.5rem;
+
+     .title {
+       font-size: 150%;
+       margin-bottom: 10px;;
+     }
+  }
+
+  .content {
+    text-align: justify;
+  }
+
+  code {
+    display: block;
+    width: 100%;
+    background: hsla(0,0%,50%,.33);
+    color: $base-color;
+    border-radius: $base-border-radius;
+    padding: 10px 20px;
+    margin: 20px 0;
+  }
+}

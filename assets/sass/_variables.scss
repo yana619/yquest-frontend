@@ -1,0 +1,35 @@
+$color-white: #ffffff;
+$color-black: #000000;
+
+$mobile-screen-width: 550px;
+
+$base-background-color: #0c0c0c;
+$base-color: #ccc8c8;
+$title-color: #efefef;
+$footer-background: $color-black;
+$base-font-size: 17px;
+$base-font-family: Courier, CourierRegular;
+$base-border-radius: 5px;
+$base-font-weight: 400;
+
+$footer-height: 55px;
+$footer-height-mobile: $footer-height * 2;
+
+$error-color: #852323;
+$success-color: #26513b;
+
+$button-primary-background: #505150;
+$button-primary-background-hover: #383535 ;
+
+$provider-button-color: $color-white;
+
+$google-button-background: #3173a9;
+$google-button-background-hover: #25527c;
+$google-button-icon-background: $google-button-background-hover;
+$google-button-icon-background-hover: #1b3858;
+
+$fb-button-background: #2f447a;
+$fb-button-background-hover: #212a52;
+$fb-button-icon-background: $fb-button-background-hover;
+$fb-button-icon-background-hover: #1c2041;
+

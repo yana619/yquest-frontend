@@ -1,0 +1,74 @@
+.login-providers {
+  width: 100%;
+
+
+  .column {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+
+    .provider-button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 0;
+      height: 40px;
+      text-align: left;
+      color: $provider-button-color;
+      border: none;
+      box-shadow: none !important;
+
+      .icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        font-size: 160%;
+        height: 40px;
+        margin: 0;
+        text-align: center;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .label {
+        display: block;
+        padding: 0 10px 0 50px;
+        color: inherit;
+        font-weight: $base-font-weight;
+      }
+
+      &.google {
+        background-color: $google-button-background !important;
+
+        .icon {
+          background-color: $google-button-icon-background;
+        }
+
+        &:hover {
+          background-color: $google-button-background-hover !important;
+
+          .icon {
+            background-color: $google-button-icon-background-hover;
+          }
+        }
+      }
+
+      &.facebook {
+        background-color: $fb-button-background !important;
+
+        .icon {
+          background-color: $fb-button-icon-background;
+        }
+
+        &:hover {
+          background-color: $fb-button-background-hover !important;
+
+          .icon {
+            background-color: $fb-button-icon-background-hover;
+          }
+        }
+      }
+    }
+  }
+}

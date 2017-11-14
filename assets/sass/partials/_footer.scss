@@ -1,0 +1,92 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $footer-height;
+  padding: 0;
+  text-align: center;
+  background-color: $footer-background;
+
+  .custom-column {
+    padding: 0.35em 0.75em !important;
+  }
+
+  .control {
+    &.control-input {
+      width: 100%;
+    }
+  }
+
+  .left-content, .right-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  .right-content {
+    right: 0;
+  }
+
+  .left-content {
+    left: 0;
+    padding: 15px;
+    font-size: 90%;
+  }
+
+  .sign-out-btn {
+    display: inline-block;
+    height: $footer-height;
+    width: $footer-height;
+    background-color: $footer-background;
+    color: $color-white;
+    border: none;
+    box-shadow: none !important;
+
+    &:hover {
+      color: $base-color;
+    }
+  }
+
+  .socket-indicator {
+    display: inline-block;
+    height: $footer-height;
+    width: 30px;
+    padding-top: 15px;
+    color: $error-color;
+    text-align: center;
+
+    &:hover {
+      color: #571717;
+    }
+    &.active {
+      color: $success-color;
+
+      &:hover {
+        color: #1c3828;
+      }
+    }
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: $mobile-screen-width) {
+    .container {
+      height: auto;
+    }
+
+    .right-content {
+      position: relative;
+      display: block;
+      width: 100%;
+      text-align: right;
+    }
+
+    .left-content {
+      top: $footer-height;
+    }
+  }
+}
+
