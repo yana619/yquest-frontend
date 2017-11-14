@@ -1,4 +1,5 @@
 .idea
 .params.js
 .nuxt
+npm-debug.log
 .node_modules
