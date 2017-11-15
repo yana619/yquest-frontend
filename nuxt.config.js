@@ -8,7 +8,7 @@ module.exports = {
         meta: [
             {charset: 'utf-8'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-            {hid: 'description', name: 'description', content: 'Quest'}
+            {hid: 'description', name: 'description', content: 'YQuest. The idea was taken from blacklight.ai'}
         ]
     },
     build: {
