@@ -54,8 +54,11 @@
             this.setData();
         },
 
-
         mounted() {
+            this.$watch('chapterData', function () {
+                this.setData();
+            });
+
             this.$watch('questions', function () {
                 this.setLockCount();
             });

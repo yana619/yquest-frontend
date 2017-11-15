@@ -24,7 +24,7 @@ export default class WS {
             function (isConnected) {
                 if (isConnected) {
                     self.joinQuest();
-              //      self.ping();
+                    self.ping();
                 }
             });
 
