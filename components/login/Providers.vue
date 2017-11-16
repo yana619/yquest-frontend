@@ -7,7 +7,7 @@
                         <i :class="provider.icon" aria-hidden="true"></i>
                     </div>
                     <div class="label">
-                        Log In with {{provider.label}}
+                        {{provider.label}}
                     </div>
                 </button>
             </template>
@@ -24,8 +24,13 @@
                 providers: [
                     {
                         name: 'google',
-                        label: 'Google',
+                        label: 'Log In with Google',
                         icon: 'fa fa-google'
+                    },
+                    {
+                        name: 'guest',
+                        label: 'Log In as Guest',
+                        icon: 'fa fa-user'
                     }
                 ]
             }

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import GoogleAuth from 'vue-google-auth';
-import {signInGoogle} from '~/utils/api';
+import {signInGoogle, signInGuest} from '~/utils/api';
 import Error from '~/utils/error-handler';
 import params from '~/.params';
 
@@ -19,6 +19,10 @@ export const authenticate = function (provider) {
                 Error.handle(error);
             });
 
+            break;
+
+        case 'guest':
+            signInGuest();
             break;
     }
 };
