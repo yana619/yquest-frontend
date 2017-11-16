@@ -2,18 +2,20 @@
     <section class="footer">
         <div class="container">
             <section>
-                <div class="column custom-column is-8-desktop is-offset-2-desktop is-8-tablet is-offset-2-tablet is-8-mobile is-offset-2-mobile">
-                    <div id="answer" class="field has-addons" v-bind:class="answerStatus">
-                        <div class="control control-input">
-                            <input class="input" type="text" title="" v-model="answer" name="answer">
-                        </div>
-                        <div class="control">
-                            <a class="button is-outlined is-primary" @click="sendAnswer">
-                                Go
-                            </a>
+                <form @submit.prevent="sendAnswer()">
+                    <div class="column custom-column is-8-desktop is-offset-2-desktop is-8-tablet is-offset-2-tablet is-8-mobile is-offset-2-mobile">
+                        <div id="answer" class="field has-addons" v-bind:class="answerStatus">
+                            <div class="control control-input">
+                                <input class="input" type="text" title="" v-model="answer" name="answer">
+                            </div>
+                            <div class="control">
+                                <a class="button is-outlined is-primary" @click="sendAnswer">
+                                    Go
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </section>
         </div>
         <div class="left-content">
