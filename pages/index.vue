@@ -12,6 +12,8 @@
                             class="email">yanka-gala@mail.ru</span>.</p>
                     <p>Please, sign in to keep your progress. We will add more sign-in providers later, I hope..)</p>
                     <p>And do not bruteforce, please.. )</p>
+                    <br>
+                    <p>If you can't sign in or don't want to do it, use "Log In as Guest" button. But we do not guarantee that your progress will continue.</p>
                 </div>
                 <login-providers/>
             </div>

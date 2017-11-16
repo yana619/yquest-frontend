@@ -20,6 +20,23 @@ export const signInGoogle = function (token) {
         });
 };
 
+export const signInGuest = function () {
+    let nuxt = document.getElementById('__nuxt');
+    nuxt.className = 'waiting';
+
+    axios
+        .post(params.api_host + 'auth/sign-in-guest')
+        .then(function (res) {
+            setToken(res.headers.authorization);
+            // TODO: AAA!! Rewrite!
+            window.location.href = '/quest';
+        })
+        .catch(function (e) {
+            nuxt.className = '';
+            Error.handle(e);
+        });
+};
+
 export const signOut = function () {
     unsetToken();
     // TODO: Add Rest Request to sign-out

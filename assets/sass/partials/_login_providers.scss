@@ -69,6 +69,22 @@
           }
         }
       }
+
+      &.guest {
+        background-color: $guest-button-background !important;
+
+        .icon {
+          background-color: $guest-button-icon-background;
+        }
+
+        &:hover {
+          background-color: $guest-button-background-hover !important;
+
+          .icon {
+            background-color: $guest-button-icon-background-hover;
+          }
+        }
+      }
     }
   }
 }
