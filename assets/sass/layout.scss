@@ -67,4 +67,18 @@ body {
   .email {
     color: #1363ab;
   }
+
+  .mini-toastr {
+    font-size: 90%;
+
+    .mini-toastr__notification {
+      &.-info {
+        background-color: #5d6672 !important;
+      }
+
+      .mini-toastr-notification__message{
+        padding-left: 0 !important;
+      }
+    }
+  }
 }
