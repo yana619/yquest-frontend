@@ -42,6 +42,8 @@ export default class WS {
         switch (eventType) {
             case 'answer':
                 return 'answer';
+            case 'hint':
+                return 'hint';
             case 'ping':
                 return 'ping';
             case 'join':
@@ -53,7 +55,6 @@ export default class WS {
 
     static sendMessage(message) {
         message = JSON.stringify(message);
-      //  this.$socket.send(message)
         Vue.prototype.$socket.send(message);
     };
 
@@ -76,6 +77,13 @@ export default class WS {
         let message = this.composeMessage('answer', {
             chapterId: chapterId,
             answer: answer,
+        });
+        WS.sendMessage(message);
+    };
+
+    getHint(chapterId) {
+        let message = this.composeMessage('hint', {
+            chapterId: chapterId,
         });
         WS.sendMessage(message);
     };

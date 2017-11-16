@@ -11,7 +11,7 @@
                     </div>
                 </div>
             </section>
-            <quest-footer :answerStatus="answerStatus" :isNetworkActive="isNetworkActive" @on-answer="sendAnswer"/>
+            <quest-footer :answerStatus="answerStatus" :isNetworkActive="isNetworkActive" @on-answer="sendAnswer"  @on-get-hint="getHint"/>
         </template>
 
     </div>
@@ -21,6 +21,8 @@
     import Chapter from '~/components/quest/Chapter.vue';
     import QuestFooter from '~/components/quest/Footer.vue';
     import WS from '~/modules/ws';
+
+    let miniToastr = require('mini-toastr');
 
     export default {
         components: {
@@ -73,6 +75,10 @@
                                 self.setAnswerStatus((status == 200) ? 'success' : 'error');
                                 break;
 
+                            case 'hint':
+                                miniToastr['info'](response);
+                                break;
+
                             case 'state_content':
                                 self.chapter = response.content.chapters[0];
                                 self.chapterId = self.chapter['id'];
@@ -91,8 +97,11 @@
 
         methods: {
             sendAnswer(answer) {
-                let self = this;
-                self.ws.answer(self.chapterId, answer);
+                this.ws.answer(this.chapterId, answer);
+            },
+
+            getHint() {
+                this.ws.getHint(this.chapterId);
             },
 
             setAnswerStatus(status) {

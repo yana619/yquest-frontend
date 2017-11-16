@@ -23,6 +23,9 @@
             <div class="socket-indicator" v-bind:class="{ active: isNetworkActive}">
                 <i class="fa fa-circle" aria-hidden="true" title="I should be green, if not, refresh the page =)"></i>
             </div>
+            <button class="button hint-btn" @click="getHint" title="Get a hint">
+                <i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i>
+            </button>
             <button class="button sign-out-btn" @click="logOut" title="Goodbye =)">
                 <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
             </button>
@@ -59,6 +62,10 @@
 
             logOut() {
                 signOut();
+            },
+
+            getHint() {
+                this.$emit('on-get-hint');
             }
         },
     }
