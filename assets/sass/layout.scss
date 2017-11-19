@@ -13,16 +13,14 @@
 
 html {
   height: 100%;
+  background: $base-background-color;
 }
 
 body {
   height: auto;
   min-height: 100%;
-}
-
-body {
+  position: relative;
   background: $base-background-color;
-  background-size: cover;
   font-family: $base-font-family;
   font-size: $base-font-size;
   color: $base-color;
@@ -76,9 +74,21 @@ body {
         background-color: #5d6672 !important;
       }
 
-      .mini-toastr-notification__message{
+      .mini-toastr-notification__message {
         padding-left: 0 !important;
       }
+    }
+  }
+
+  #template-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-height;
+
+    .container {
+      font-size: 70%;
+      text-align: right;
     }
   }
 }
